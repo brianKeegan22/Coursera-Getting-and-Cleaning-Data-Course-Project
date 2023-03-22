@@ -44,7 +44,7 @@ dfMelt <- melt(df,id=c("Activity", "Subject_ID"))
 TidyDataSet <- dcast(dfMelt, Subject_ID + Activity ~ variable,mean)
 
 
-write.csv(TidyDataSet, "C:\\Users\\brian.keegan\\Desktop\\R Work\\RWork\\data\\UCI HAR Dataset\\TidyDataSet.csv", row.names=FALSE)
+write.table(TidyDataSet, "C:\\Users\\brian.keegan\\Desktop\\R Work\\RWork\\data\\UCI HAR Dataset\\TidyDataSet.txt", row.names=FALSE)
 
 
 
